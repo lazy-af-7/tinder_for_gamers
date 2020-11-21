@@ -17,7 +17,7 @@ class _Login_PageState extends State<Login_Page> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage("images/giphy.gif"), fit: BoxFit.cover),
+            image: AssetImage("images/gamepad.gif"), fit: BoxFit.cover),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -46,7 +46,7 @@ class _Login_PageState extends State<Login_Page> {
                   child: Card(
                     shape: StadiumBorder(
                         side: BorderSide(
-                      color: Colors.black,
+                      color: Colors.white,
                       width: 1.0,
                     )),
                     margin: EdgeInsets.fromLTRB(10.0, 2.0, 10.0, 2.0),
@@ -83,7 +83,7 @@ class _Login_PageState extends State<Login_Page> {
                   child: Card(
                     shape: StadiumBorder(
                         side: BorderSide(
-                      color: Colors.black,
+                      color: Colors.white,
                       width: 1.0,
                     )),
                     margin: EdgeInsets.fromLTRB(10.0, 2.0, 10.0, 2.0),
@@ -204,7 +204,7 @@ class _Login_PageState extends State<Login_Page> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       decoration: TextDecoration.underline,
-                      color: HexColor("#261d02"),
+                      color: Colors.white,
                       fontSize: 15,
                     ),
                   ),
