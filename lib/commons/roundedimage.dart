@@ -26,7 +26,7 @@ class RoundedImage extends StatelessWidget {
     //   ),
     // );
     return CircleAvatar(
-      backgroundImage: AssetImage("assets/images/spock.jpg"),
+      backgroundImage: AssetImage(imagePath),
       radius: 60,
       backgroundColor: Colors.black,
     );

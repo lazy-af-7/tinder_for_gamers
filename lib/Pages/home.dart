@@ -13,7 +13,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _selected_index = 1;
   List<Widget> _widget_options = <Widget>[
-    gar(),
+    proflie(),
     Swipe_Card(),
     Messages(),
   ];

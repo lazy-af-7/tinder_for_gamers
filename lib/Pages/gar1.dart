@@ -15,7 +15,7 @@ class gar1 extends StatelessWidget {
               child: Stack(
                 children: <Widget>[
                   OpqueImage(
-                    imageUrl: "assets/images/gar.jpg",
+                    imageUrl: "images/martian.jpg",
                   ),
                   SafeArea(
                     child: Padding(

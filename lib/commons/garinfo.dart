@@ -17,7 +17,7 @@ class garinfo extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                "Wistful_peace",
+                "Wistful_Peace_7",
                 style: whiteNameTextStyle,
               ),
               Text(

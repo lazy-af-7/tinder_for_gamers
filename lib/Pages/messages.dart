@@ -18,8 +18,19 @@ class _MessagesState extends State<Messages> {
         fontFamily: 'Bebas Neue',
         fontSize: 40,
       ));
+  List<String> chat = ["Hermione", "Harry", "Albus"];
+  List<String> chat_text = [
+    "Yo! Wanna play some RL?",
+    "You: I want your wand dude!",
+    "You: Yo Albus! Wanna learn some magic dude?",
+  ];
+  List<String> chat_img = [
+    "images/hermoine.jpeg",
+    "images/harry.jpg",
+    "images/albus.jpg",
+  ];
   List<String> favorites_img = [
-    "images/spock.jpg",
+    "images/natalia.jpg",
     "images/kirk.png",
     "images/uhura.jpg",
     "images/mccoy.jpg",
@@ -27,7 +38,7 @@ class _MessagesState extends State<Messages> {
     "images/christine.jpg",
   ];
   List<String> favorites = [
-    "Captain Spock",
+    "Nancy",
     "Captain Kirk",
     "Uhura",
     "Doctor McCoy",
@@ -62,7 +73,7 @@ class _MessagesState extends State<Messages> {
                     this.search = TextField(
                       textInputAction: TextInputAction.go,
                       decoration: InputDecoration(
-                        hintText: "Search A Movie",
+                        hintText: "Search A Chat",
                         hintStyle: TextStyle(
                           color: HexColor('#39ff14'),
                         ),
@@ -77,7 +88,7 @@ class _MessagesState extends State<Messages> {
                       Icons.search,
                       color: HexColor('#39ff14'),
                     );
-                    this.search = Text("POPCORN",
+                    this.search = Text("CHATS",
                         style: TextStyle(
                           fontFamily: 'Bebas Neue',
                           fontSize: 40,
@@ -132,7 +143,60 @@ class _MessagesState extends State<Messages> {
                       ],
                     );
                   }),
-            )
+            ),
+            Container(
+              child: ListView.builder(
+                shrinkWrap: true,
+                itemCount: chat.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: FlatButton(
+                      onPressed: () => {
+                        Navigator.pushNamed(context, '/chat'),
+                        print('pressed\n'),
+                      },
+                      child: Row(
+                        children: [
+                          Row(
+                            children: [
+                              CircleAvatar(
+                                radius: 35,
+                                backgroundImage: AssetImage(chat_img[index]),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    chat[index],
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 18),
+                                  ),
+                                  Container(
+                                    width: MediaQuery.of(context).size.width *
+                                        0.45,
+                                    child: Text(
+                                      chat_text[index],
+                                      style: TextStyle(
+                                          color: HexColor('#39ff14'),
+                                          fontSize: 15),
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
           ],
         ));
   }

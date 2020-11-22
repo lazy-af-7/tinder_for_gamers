@@ -10,7 +10,7 @@ class myinfo extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           RoundedImage(
-            imagePath: "assets/images/star.jpg",
+            imagePath: "assets/images/spock.jpg",
             size: Size.fromWidth(120.0),
           ),
           Row(

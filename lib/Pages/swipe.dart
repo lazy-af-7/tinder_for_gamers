@@ -54,7 +54,10 @@ class _Swipe_CardState extends State<Swipe_Card> with TickerProviderStateMixin {
               maxLines: 2,
             ),
             FlatButton(
-              onPressed: () => {print('button pressed\n')},
+              onPressed: () => {
+                Navigator.pushNamed(context, '/wistful'),
+                print('button pressed\n'),
+              },
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.36,
                 child: TinderSwapCard(

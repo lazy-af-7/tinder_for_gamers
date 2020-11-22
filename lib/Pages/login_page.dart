@@ -20,6 +20,7 @@ class _Login_PageState extends State<Login_Page> {
             image: AssetImage("images/gamepad.gif"), fit: BoxFit.cover),
       ),
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: Colors.transparent,
         body: Container(
           child: Column(
