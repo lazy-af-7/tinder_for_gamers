@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:Tinder_For_Gamers/Pages/swipe.dart';
 import 'package:Tinder_For_Gamers/Pages/messages.dart';
+import 'package:Tinder_For_Gamers/Pages/proflie.dart';
+import 'package:Tinder_For_Gamers/Pages/gar.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -11,10 +13,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _selected_index = 1;
   List<Widget> _widget_options = <Widget>[
-    Text(
-      'Profile',
-      style: TextStyle(color: Colors.white),
-    ),
+    gar(),
     Swipe_Card(),
     Messages(),
   ];
